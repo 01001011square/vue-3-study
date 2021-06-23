@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, SetupContext } from "vue";
+import { defineComponent, SetupContext } from 'vue'
 
 export default defineComponent({
   name: 'Child',
