@@ -33,13 +33,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, SetupContext } from 'vue';
 
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String,
+    age: Number
   },
+  inheritAttrs: false,
+  setup (props, {attrs}: SetupContext) {
+    // console.log(attrs.name)
+  }
 });
 </script>
 
