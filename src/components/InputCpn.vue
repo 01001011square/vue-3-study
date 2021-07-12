@@ -14,7 +14,7 @@ export default defineComponent({
   setup (props, {emit}: SetupContext) {
     const value = ref('')
     watch(() => value.value, (val: string) => {
-      emit('update:modelValue', val) // 实现跨组件双向绑定
+      emit('update:modelValue', val) // 监听value，emit到父组件绑定的v-model，实现跨组件双向绑定
       emit('input', val) // 绑定input事件，并传值
     })
     return {
@@ -24,7 +24,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .input {
   height: 100px;
   width: 100%;
