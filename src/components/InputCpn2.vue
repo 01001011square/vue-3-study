@@ -8,7 +8,7 @@
 import { defineComponent, ref, SetupContext } from 'vue'
 export default defineComponent({
   name: 'InputCpn2',
-  porps:{
+  props:{
     modelValue: String
   },
   setup (props, { emit }: SetupContext) {
